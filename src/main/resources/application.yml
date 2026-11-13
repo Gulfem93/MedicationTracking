@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: medicationtracking
+  profiles:
+    active: dev
+  web:
+    resources:
+      add-mappings: true
+
+redirect:
+  forwardUrl: /
