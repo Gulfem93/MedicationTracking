@@ -257,7 +257,7 @@ main {
   gap: 6px;
   padding: 0;
   width: 100%;      /* W: Fill */
-  height: 80px;  
+  height: 80px; 
 }
 
 .form_rightEmailTitle{
@@ -286,67 +286,57 @@ main {
   font-family: 'Manrope', sans-serif;
   font-size: 14px;
   color: #10262B;
-  border: 2px solid #0E5E6F; 
+  
+  border: 2px solid #0E5E6F;
 }
 
-.form_rightEmailInput::placeholder {
-  color: #587074;            /* check the placeholder text's color in Figma */
-}
 
-.form_rightEmailInput:focus {
-  box-shadow: 0 0 0 2px #10262B;   /* visible focus, since outline is removed */
-}
-
-/*Sağ giriş paneli form kart password*/
-.form_rightPassword{
+/*Sağ giriş paneli form kart Password*/
+.form_rightPassword {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
-  top: 40;
-  left: 220;
   gap: 6px;
-  padding: 0;
-  width: 100%;      /* W: Fill */
-  height: 80px; 
+  width: 100%;
+  height: 80px;
 }
 
-.form_rightPasswordTitle{
-  margin: 0;
+.form_rightPasswordTitle {
   font-family: 'Manrope', sans-serif;
-  font-weight: bold;          /* Bold */
+  font-weight: 700;
   font-size: 14px;
-  line-height: 145%;         /* ≈ 20px */
-  letter-spacing: 0;
-  text-align: left;
-  color: #10262B;            /* placeholder: check the Fill section */
-  white-space: nowrap;   
+  line-height: 145%;
+  color: #10262B;
 }
 
+/* Kutu: input + Göster yan yana */
 .form_rightInputBox {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
   gap: 8px;
   width: 100%;
   height: 48px;
   padding: 0 14px;
   box-sizing: border-box;
+  border: 1px solid #D5E2E3;
   border-radius: 12px;
-  border: 1px solid #D5DFE0;      /* Kutu > Stroke'tan kontrol et */
-  background: var(--renk-card);
+  background: #FFFFFF;
   overflow: hidden;
 }
 
-/* E-posta kutusundaki koyu kalın çerçeve = odak (focus) hâli */
+/* Odaklanınca petrol çerçeve */
 .form_rightInputBox:focus-within {
-  border: 2px solid #135F6E;      /* Giriş yap butonunun rengi */
+  border-color: #0E5E6F;
+  box-shadow: 0 0 0 1px #0E5E6F;
 }
 
+/* Kutunun içindeki input: kendi çerçevesi olmasın */
 .form_rightInputBox input {
   flex: 1;
   min-width: 0;
+  height: 100%;
+  padding: 0;
   border: none;
   outline: none;
   background: transparent;
@@ -355,6 +345,11 @@ main {
   color: #10262B;
 }
 
+.form_rightInputBox input::placeholder {
+  color: #587074;
+}
+
+/* Göster */
 .form_rightShowBtn {
   flex-shrink: 0;
   padding: 0;
@@ -364,139 +359,6 @@ main {
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: 14px;
-  color: #135F6E;                 /* Göster > Fill'den kontrol et */
-}
-
-.form_rightInputBox a{
   color: #0E5E6F;
   text-decoration: none;
 }
-
-/*Checkbox*/
-/* Seçenekler */
-.form_rightOptions {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;  /* biri sola, biri sağa */
-  align-items: center;
-  width: 100%;                     /* W: Fill */
-}
-
-/* Beni hatırla */
-.form_rightRemember {
-  display: flex;
-  align-items: center;
-  gap: 8px;                        /* Figma'daki gap'ten kontrol et */
-  cursor: pointer;
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #10262B;
-}
-
-.form_rightRemember input {
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  accent-color: #135F6E;           /* işaretli kutunun rengi */
-  cursor: pointer;
-}
-
-/* Şifremi unuttum */
-.form_rightForgot {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: #135F6E;
-  text-decoration: none;
-}
-
-.form_rightForgot:hover {
-  text-decoration: underline;
-}
-
-/*Login Button*/
-.form_rightButtonLogin{
-  top: 40;
-  left: 358;
-  width: 100%;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 18px;
-  padding-right: 18px;
-  border-radius: 999px;
-  background-color: #0E5E6F;
-}
-
-.form_rightTextLogin{
-  top: 166.5;
-  left: 11;
-  font-family: 'Manrope', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 140%;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-/*Form Text Line*/
-/* veya */
-.form_rightDivider {
-  display: flex;
-  flex-direction: row;
-  align-items: center;      /* çizgiler dikeyde ortada: Y 9.5 = (20 − 1) / 2 */
-  gap: 12px;
-  width: 100%;              /* W: Fill */
-  padding: 0;
-  overflow: hidden;
-}
-
-/* Rectangle */
-.form_rightDividerLine {
-  flex: 1;                  /* W: Fill, kalan alanı iki çizgi eşit paylaşır */
-  height: 1px;
-  background: #D5E2E3;
-}
-
-/* veya metni */
-.form_rightDividerText {
-  font-family: 'Manrope', sans-serif;
-  font-size: 13px;          /* Typography'den kontrol et */
-  line-height: 20px;        /* H: 20 */
-  color: #587074;           /* Fill'den kontrol et */
-  white-space: nowrap;
-}
-
-/*Google ile devam et butonu*/
-.form_rightLoginGoogle{
-  top: 40px;
-  left: 458px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-  padding: 18px 0;
-  gap: 0;
-  border-radius: 999px;
-  border: #D5E2E3 1px solid;
-  background-color: #FFFFFF;
-}
-
-.form_rightLoginGoogle a{
-  top: 124px;
-  left: 11px;
-  min-width: 152px;
-  min-height: 22px;
-  text-decoration: none;
-
-  font-family: 'Manrope', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 140%;
-  color: #10262B;
-}
-
