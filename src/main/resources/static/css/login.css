@@ -496,16 +496,25 @@ main {
 }
 
 /*Ortala*/
-.form_rightCenter{
+.form_redirect {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5b6b70;        /* soluk metin, Figma'daki değeri kullan */
 }
 
-.form_rightRedirect{
-  gap: 4px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.form_redirect a {
+  font-weight: 700;
+  color: #0f5c6b;        /* ana renk, "Giriş yap" butonuyla aynı */
+  text-decoration: none;
+}
+
+.form_redirect a:hover,
+.form_redirect a:focus-visible {
+  text-decoration: underline;
 }
