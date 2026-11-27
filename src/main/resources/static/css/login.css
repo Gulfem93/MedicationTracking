@@ -40,36 +40,22 @@ main {
 
 /* Logo */
 .class_Logo {
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
   align-items: center;
-
-  top: 64;
-  left: 56;
-
-  width: 169px;
-  height: 32px;
-
-  gap: 10px;
-  padding: 0;
-}
-
-.class_Logo span {
-  color: #FFFFFF;
+  gap: 12px;
 }
 
 .class_LogoSymbol {
-  top: 0;
-  left: 0;
-  width: 32px;
+  width: 32px;      /* yazının satır yüksekliğiyle aynı */
   height: 32px;
+  flex-shrink: 0;   /* flex içinde ezilmesin */
 }
 
 .class_Logo span {
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.45;
-  white-space: nowrap;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
 }
 
 /* Tanıtım */
