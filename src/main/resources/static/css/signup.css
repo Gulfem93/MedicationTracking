@@ -1,0 +1,628 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+
+  display: flex;
+  flex-direction: row;
+
+
+  width: 1440px;
+  height: 900px;
+  background-color: #EEF4F4;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ========== SOL: Tanıtım paneli ========== */
+.class_PromotionalPanel {
+  display:flex;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  justify-content:space-around;
+  align-items:flex-start;
+  align-content:space-around;
+  gap: 48px;
+  flex: 0 0 600px;
+  width: 600px;
+  height: 100%;
+  padding: 56px 64px;
+  border-radius: 0;
+  background-color: var(--teal);
+  color: var(--white);
+  background-color: #0E5E6F;
+}
+
+/* Logo */
+.class_Logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.class_LogoSymbol {
+  width: 32px;      /* yazının satır yüksekliğiyle aynı */
+  height: 32px;
+  flex-shrink: 0;   /* flex içinde ezilmesin */
+}
+
+.class_Logo span {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Tanıtım */
+.class_Introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Mini kadran */
+.class_MiniKadran {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin-bottom: 16px;
+}
+
+.kadrancizimi {
+  display: block;
+  width: 300px;
+  height: 300px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.class_MiniCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.miniCenter-label {
+  font-weight: 600;
+  font-size: 12px;
+  opacity: 0.75;
+
+  color: #FFFFFF;
+}
+
+.miniCenter-time {
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  color: #FFFFFF;
+}
+
+.miniCenter-name {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.promo-title {
+  margin: 0;
+  max-width: 440px;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.15;
+
+  color: #FFFFFF;
+}
+
+.promo-text {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  opacity: 0.82;
+
+  color: #FFFFFF;
+}
+
+/* Özellikler */
+.class_Properties {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.class_Properties li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #FFFFFF;
+  opacity: 0.9;
+
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  font-weight: medium;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.class_Properties li::before {
+  content: "";
+  flex: 0 0 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #F0A500;
+}
+
+/* ========== SAĞ: Giriş paneli ========== */
+.class_signupPanel{
+    top: 600;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 840px;
+    height: 900px;
+    padding: 0;
+    gap: 0;
+}
+
+.formCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: 180;
+    left: 159;
+    width: 480px;
+    min-height: 798px;
+    gap: 18px;
+    padding: 40px;
+    border-radius: 28px;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1px solid #D5E2E3;
+    box-sizing: border-box;
+}
+
+.form_rightHandle{
+    top: 41px;
+    left: 41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 0;
+    width: 100%;
+    min-height: 64px;        /* 35 + 6 + 23 = 64 */
+    overflow: hidden;
+}
+
+.form_rightHandleTitle {
+    min-width: 221px;
+    min-height: 35px;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 110%;
+    color: #10262B;
+    white-space: nowrap;
+}
+
+.form_rightDescriptionTitle {
+    top: 0;
+    left: 41px;
+    width: 100%;
+    min-height: 23px;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    color: #587074;
+    white-space: nowrap;
+}
+
+
+/*Sağ giriş paneli form kart Username UserSurname*/
+.form_rightUserName {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 0;
+  width: 100%;      /* W: Fill */
+  height: 80px; 
+}
+
+.form_rightUserNameTitle{
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;          /* Bold */
+  font-size: 14px;
+  line-height: 145%;         /* ≈ 20px */
+  letter-spacing: 0;
+  text-align: left;
+  color: #10262B;            /* placeholder: check the Fill section */
+  white-space: nowrap;   
+}
+
+.form_rightUserNameInput {
+  width: 100%;               /* W: Fill */
+  height: 48px;              /* H: fixed 48 */
+  padding: 0 14px;           /* vertical 0, horizontal 14 */
+  box-sizing: border-box;    /* keeps the padding inside the 100% width */
+
+  border: none;              /* add a border here if Figma has a Stroke */
+  border-radius: 12px;
+  background: var(--renk-card);
+  outline: none;
+
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: #587074;
+  
+  border: 2px solid #D5E2E3;
+}
+
+/*Sağ giriş paneli form kart Username E-Mail*/
+.form_rightEmail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 0;
+  width: 100%;      /* W: Fill */
+  height: 80px; 
+}
+
+.form_rightEmailTitle{
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;          /* Bold */
+  font-size: 14px;
+  line-height: 145%;         /* ≈ 20px */
+  letter-spacing: 0;
+  text-align: left;
+  color: #10262B;            /* placeholder: check the Fill section */
+  white-space: nowrap;   
+}
+
+.form_rightEmailInput {
+  width: 100%;               /* W: Fill */
+  height: 48px;              /* H: fixed 48 */
+  padding: 0 14px;           /* vertical 0, horizontal 14 */
+  box-sizing: border-box;    /* keeps the padding inside the 100% width */
+
+  border: none;              /* add a border here if Figma has a Stroke */
+  border-radius: 12px;
+  background: var(--renk-card);
+  outline: none;
+
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: #10262B;
+  
+  border: 2px solid #D5E2E3;
+}
+
+/*Sağ giriş paneli form kart Password*/
+.form_rightPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  height: 80px;
+}
+
+.form_rightPasswordTitle {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 145%;
+  color: #10262B;
+}
+
+/* Kutu: input + Göster yan yana */
+.form_rightInputBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  border: 1px solid #D5E2E3;
+  border-radius: 12px;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+/* Odaklanınca petrol çerçeve */
+.form_rightInputBox:focus-within {
+  border-color: #0E5E6F;
+  box-shadow: 0 0 0 1px #0E5E6F;
+}
+
+/* Kutunun içindeki input: kendi çerçevesi olmasın */
+.form_rightInputBox input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: #10262B;
+}
+
+.form_rightInputBox input::placeholder {
+  color: #587074;
+}
+
+/* Göster */
+.form_rightShowBtn {
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #0E5E6F;
+  text-decoration: none;
+}
+
+/*Sağ giriş paneli form kart Tekrar Password*/
+.form_rightRePassword {
+    top: 41px;
+    left: 417px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+    height: 80px;
+}
+
+.form_rightRePasswordTitle {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 145%;
+  color: #10262B;
+}
+
+/* Kutu: input + Göster yan yana */
+.form_reRightInputBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  border: 2px solid #587074;
+  border-radius: 12px;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+/* Odaklanınca petrol çerçeve */
+.form_reRightInputBox:focus-within {
+  border-color: #0E5E6F;
+  box-shadow: 0 0 0 1px #0E5E6F;
+}
+
+/* Kutunun içindeki input: kendi çerçevesi olmasın */
+.form_reRightInputBox input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: #10262B;
+}
+
+.form_reRightInputBox input::placeholder {
+  color: #587074;
+}
+
+/* Göster */
+.form_reRightShowBtn {
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #0E5E6F;
+  text-decoration: none;
+}
+
+.form_rightOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* "Beni hatırla" etiketi */
+.form_rightRemember {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: #10262B;
+}
+
+/* Checkbox kutusu */
+.form_rightRemember input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  border: 2px solid #0E5E6F;
+  border-radius: 6px;
+  background: #fff;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+/* Tik işareti */
+.form_rightRemember input::after {
+  content: "";
+  width: 6px;
+  height: 11px;
+  border: solid #fff;
+  border-width: 0 2.5px 2.5px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+  opacity: 0;
+}
+
+/* İşaretliyken */
+.form_rightRemember input:checked {
+  background: #0E5E6F;
+}
+
+.form_rightRemember input:checked::after {
+  opacity: 1;
+}
+
+/*Login*/
+.form_rightOptions a {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0E5E6F;
+  text-decoration: none;
+}
+
+.form_rightButtonLogin{
+  top: 40px;
+  left: 358px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0px;
+  background-color: #0E5E6F;
+  border-radius: 999px;
+}
+
+.form_rightButtonLogin a{
+  color: #FFFFFF;
+  line-height: 140%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/*çizgi çizme*/
+.form_rightDivider {
+  display: flex;
+  align-items: center;      /* çizgiler yazının dikey ortasında dursun */
+  gap: 12px;                /* Figma: Gap 12 */
+  width: 100%;              /* Figma: W Fill */
+  min-height: 20px;         /* Figma: H Hug (20) */
+  margin: 4px 0;
+}
+
+.form_rightDividerLine {
+  flex: 1;                  /* iki çizgi kalan alanı eşit paylaşır */
+  height: 1px;
+  background-color: #d9e1e3; /* açık gri-mavi çizgi */
+}
+
+.form_rightDividerText {
+  flex-shrink: 0;           /* "veya" yazısı daralmasın */
+  font-size: 14px;
+  line-height: 20px;
+  color: #6b7a80;           /* soluk gri yazı */
+  text-transform: lowercase;
+}
+
+.form_rightLoginGoogle{
+  width: 100%;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 0px;
+  border-radius: 999px;
+  border: 1px solid #D5E2E3;
+  background-color: #FFFFFF;
+}
+
+.form_rightLoginGoogle a{
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  line-height: 140%;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/*Ortala*/
+.form_redirect {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5b6b70;        /* soluk metin, Figma'daki değeri kullan */
+}
+
+.form_redirect a {
+  font-weight: 700;
+  color: #0f5c6b;        /* ana renk, "Giriş yap" butonuyla aynı */
+  text-decoration: none;
+}
+
+.form_redirect a:hover,
+.form_redirect a:focus-visible {
+  text-decoration: underline;
+}
